@@ -167,13 +167,14 @@ void Map::save(std::string path, std::string path1)
     
     std::ofstream out1(path1.c_str(), std::ios::out | std::ios::trunc);
     
+    out1 << m_taille << " " << m_taille << std::endl;
     for(unsigned int j(0); j<m_taille; j++)
         for(unsigned int i(0); i<m_taille; i++)
         {
         	if(m_tabCases[i][j].getBiome()->getObstacle() == 1)
         	{
 			    out1 << i << " ";
-			    out1 << j << " pouet  ";
+			    out1 << j << " terrain  ";
 			    out1 << m_tabCases[i][j].getBiome()->getObstacle() << std::endl;
 	        }
         }
