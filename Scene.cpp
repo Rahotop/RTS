@@ -56,7 +56,7 @@ void Scene::boucle(Event *e)
     sf::Font cubic;
     cubic.loadFromFile("cubic.ttf");
     
-	sf::Text text("gold : " + std::to_string(m_gold), cubic);
+	sf::Text text("Or : " + std::to_string(m_gold), cubic);
 	text.setCharacterSize(20);
 	
 	sf::Color gold(212,175,55);
