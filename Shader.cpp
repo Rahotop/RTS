@@ -22,9 +22,9 @@ Shader::Shader(std::string vertexPath, std::string fragmentPath) : m_programID(0
 	//Compilation
 	
 	//Vertex shader
-	GLuint vertexID = glCreateShader(GL_VERTEX_SHADER);
-	glShaderSource(vertexID, 1, &codeSourceVertexGL, nullptr);
-	glCompileShader(vertexID);
+	GLuint vertexID = glCreateShader(GL_VERTEX_SHADER); //On réserve un emplacement mémoire pour le shader
+	glShaderSource(vertexID, 1, &codeSourceVertexGL, nullptr); //On transfert le code source
+	glCompileShader(vertexID); //On compile
 	
 	//Get log vertex
 	GLint log_length;
@@ -38,9 +38,9 @@ Shader::Shader(std::string vertexPath, std::string fragmentPath) : m_programID(0
 	delete[] log;
 	
 	//Fragment shader
-	GLuint fragmentID = glCreateShader(GL_FRAGMENT_SHADER);
-	glShaderSource(fragmentID, 1, &codeSourceFragmentGL, nullptr);
-	glCompileShader(fragmentID);
+	GLuint fragmentID = glCreateShader(GL_FRAGMENT_SHADER); //On réserve un emplacement mémoire pour le shader
+	glShaderSource(fragmentID, 1, &codeSourceFragmentGL, nullptr); //On transfert le code source
+	glCompileShader(fragmentID); //On compile
 	
 	//Get log Fragment
 	glGetShaderiv(fragmentID, GL_INFO_LOG_LENGTH, &log_length);
@@ -50,23 +50,25 @@ Shader::Shader(std::string vertexPath, std::string fragmentPath) : m_programID(0
 	
 	std::cout << log << std::endl;
 	
-	//Program shader
-	m_programID = glCreateProgram();
-	glAttachShader(m_programID, vertexID);
-	glAttachShader(m_programID, fragmentID);
-	glLinkProgram(m_programID);
+	delete[] log;
 	
-	glDeleteShader(vertexID);
-	glDeleteShader(fragmentID);
+	//Program shader
+	m_programID = glCreateProgram(); //On creer un shader complet
+	glAttachShader(m_programID, vertexID); //On attache le vertex shader
+	glAttachShader(m_programID, fragmentID); //On attache le fragment shader
+	glLinkProgram(m_programID); //On lie les differentes partie du shader
+	
+	glDeleteShader(vertexID); //On supprime le vertex shader inutile maintenant
+	glDeleteShader(fragmentID); //On supprime le fragment shader inutile maintenant
 }
 
 Shader::~Shader()
 {
-	glDeleteProgram(m_programID);
+	glDeleteProgram(m_programID); //On supprime le shader
 }
 
 GLuint Shader::getID()
 {
-	return m_programID;
+	return m_programID; //On retourne l'id du shader
 }
 

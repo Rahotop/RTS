@@ -1,0 +1,264 @@
+<select>
+
+
+<addElem id="0"/>
+
+	Element created with the id : 0
+
+</select>
+
+<select>
+
+
+<addElem id="1"/>
+
+	Element created with the id : 1
+
+</select>
+
+<select>
+
+	Element selected with the id : 0
+	Element targeted with the id : 0
+
+</select>
+
+7;7
+<erase id="0">
+
+	1|	0|
+	0 dead
+
+</erase>
+
+<select>
+
+
+<addElem id="2"/>
+
+	Element created with the id : 2
+
+</select>
+
+<select>
+
+	Element selected with the id : 2
+	Element targeted with the id : 1
+
+</select>
+
+7;7
+<erase id="1">
+
+	2|	1|
+	1 dead
+
+</erase>
+
+<select>
+
+
+<addElem id="3"/>
+
+	Element created with the id : 3
+
+</select>
+
+<select>
+
+	Element selected with the id : 3
+	Element targeted with the id : 2
+
+</select>
+
+7;6
+<erase id="2">
+
+	3|	2|
+	2 dead
+
+</erase>
+
+<select>
+
+
+<addElem id="4"/>
+
+	Element created with the id : 4
+
+</select>
+
+<select>
+
+	Element selected with the id : 4
+	Element targeted with the id : 3
+
+</select>
+
+7;7
+<erase id="3">
+
+	4|	3|
+	3 dead
+
+</erase>
+
+<select>
+
+
+<addElem id="5"/>
+
+	Element created with the id : 5
+
+</select>
+
+<select>
+
+	Element selected with the id : 4
+	Element targeted with the id : 5
+
+</select>
+
+7;7
+<erase id="5">
+
+	5|	4|
+	5 dead
+
+</erase>
+
+<select>
+
+	Element selected with the id : 4
+	Element targeted with the id : 4
+
+</select>
+
+7;7
+<erase id="4">
+
+	4|
+	4 dead
+
+</erase>
+
+<select>
+
+
+<addElem id="6"/>
+
+	Element created with the id : 6
+
+</select>
+
+<select>
+
+
+<addElem id="7"/>
+
+	Element created with the id : 7
+
+</select>
+
+<select>
+
+	Element selected with the id : 7
+	Element targeted with the id : 6
+
+</select>
+
+7;6
+<erase id="6">
+
+	7|	6|
+	6 dead
+
+</erase>
+
+<select>
+
+
+<addElem id="8"/>
+
+	Element created with the id : 8
+
+</select>
+
+<select>
+
+	Element selected with the id : 8
+	Element targeted with the id : 7
+
+</select>
+
+7;7
+<erase id="7">
+
+	8|	7|
+	7 dead
+
+</erase>
+
+<select>
+
+
+<addElem id="9"/>
+
+	Element created with the id : 9
+
+</select>
+
+<select>
+
+	Element selected with the id : 9
+	Element targeted with the id : 8
+
+</select>
+
+7;6
+<erase id="8">
+
+	9|	8|
+	8 dead
+
+</erase>
+
+<select>
+
+
+<addElem id="10"/>
+
+	Element created with the id : 10
+
+</select>
+
+<select>
+
+	Element selected with the id : 9
+	Element targeted with the id : 10
+
+</select>
+
+7;6
+<erase id="10">
+
+	10|	9|
+	10 dead
+
+</erase>
+
+<select>
+
+	Element selected with the id : 9
+	Element targeted with the id : 9
+
+</select>
+
+7;6
+<erase id="9">
+
+	9|
+	9 dead
+
+</erase>
+

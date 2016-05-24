@@ -8,28 +8,39 @@ class TableauCase
 
 	public:
 	
+	//Constructeur par defaut
 	TableauCase();
-	TableauCase(int taille, float couleur[3]);
+	//Constructeur qui prend en parametre sa taille
+	TableauCase(int taille);
 	~TableauCase();
-	void addCase(int x, int y);
+	//Ajout de case
+	void addCase(unsigned int r, unsigned int v, unsigned int b, unsigned int h);
 	void addCase(const Case& c);
-	void initVBO();
-	GLuint getVBO();
-	GLuint* c_tab();
+	void initUBO(); //Initialisation de l'ubo
+	GLuint getUBO(); //Accesseur à l'ubo
+	
+	void setOffset(int x, int y);
 	
 	int getTaille();
 	int getSizeof();
+	int getX();
+	int getY();
+	Case getCase(int i);
 	
+	//Surcharge de l'operateur =
 	TableauCase& operator=(const TableauCase& t);
 	
 	private:
 	
 	Case *m_tab_c;
 	int m_taille;
-	float *m_couleur;
 	GLuint *m_tabGL;
 	int m_tmpRemplissage;
-	GLuint m_vbo;
+	GLuint m_ubo;
+	
+	//offsets
+	int m_x;
+	int m_y;
 };
 
 #endif

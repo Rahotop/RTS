@@ -15,16 +15,23 @@ class Cube
 	static void init();
 	//Accesseur au VBO (vertex buffer object)
 	static GLuint getVBO();
-	static GLuint getVBOI();
+	//Accesseur au IBO (indices buffer object)
+	static GLuint getIBO();
+	//Accesseur du tableau des indices.
 	static GLubyte* getIndices();
+	//Suppression de tout les éléments dynamiques statiques.
 	static void erase();
 	
 	private:
 	
+	//Tableau des sommets dans la RAM
 	static float *m_vertices;
+	//Tableau des indices dans la RAM
 	static GLubyte *m_indices;
+	//Pointeur vers les sommets dans la VRAM
 	static GLuint m_vbo;
-	static GLuint m_vboI;
+	//Pointeur vers les indices dans la VRAM
+	static GLuint m_ibo;
 };
 
 #endif
