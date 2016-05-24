@@ -153,6 +153,21 @@ bool Player::createEnrage(const Event& e)
 	return false;
 }
 
+bool Player::createCapitaine(const Event& e)
+{
+	for(auto& x : m_elem)
+	{
+		if(x.second->getType() == 1)
+		{
+			if((abs(e.getCible().getX() - x.second->getPos().getX()) <= 5) && (abs(e.getCible().getY() - x.second->getPos().getY()) <= 5))
+			{
+				return true;
+			}
+		}
+	}
+	return false;
+}
+
 bool Player::createUnitByCap(const Event& e)
 {
 	for(auto& x : m_elem)

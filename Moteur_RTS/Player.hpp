@@ -30,6 +30,7 @@ class Player
 	void capitaineUnite();
 	bool createPaysan(const Event& e);
 	bool createEnrage(const Event& e);
+	bool createCapitaine(const Event& e);
 	bool createUnitByCap(const Event& e);
 	
 	static void setGestionnaire(Gestionnaire *g);

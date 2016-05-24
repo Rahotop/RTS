@@ -70,8 +70,11 @@ void Joueur::boucle(const Event& e)
 				case 2 :
 					if (getGold()>=1800)
 					{
-						elem = new Capitaine(e.getCible());
-						removeGold(1800);
+						if (createCapitaine(e))
+						{
+							elem = new Capitaine(e.getCible());
+							removeGold(1800);
+						}
 					}
 					break;
 				case 3 :
