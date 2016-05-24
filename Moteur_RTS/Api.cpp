@@ -1,7 +1,7 @@
 #include "Api.hpp"
 #include "Element.hpp"
 
-Api::Api(sf::ContextSettings settings) : m_gestionnaire(this), m_scene(sf::VideoMode(800, 600), "Tamer", sf::Style::Default, settings), m_event(&m_scene), m_j1()
+Api::Api(sf::ContextSettings settings) : m_gestionnaire(this), m_scene(sf::VideoMode(800, 600), "OeRauMit", sf::Style::Default, settings), m_event(&m_scene), m_j1()
 {
 	Player::setGestionnaire(&m_gestionnaire);
 	m_j1.initPlayer(Position(1,1));
