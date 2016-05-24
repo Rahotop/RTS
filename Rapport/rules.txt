@@ -1,0 +1,125 @@
+On commence avec un roi qui génère des ressources
+le roi se déplace lentement et tape pas fort, il peut créer des paysans, chaque paysans a coté du roi augmente sa génération de ressource
+plusieurs roi peuvent être créer avec un fort coup de ressource
+le paysan peut se déplacer, tape pas fort, et s'il est a coté d'un roi et d'un ennemi il devient enragé
+//le paysan peut se transformer en capitaine avec un coup moyen de ressource
+le capitaine créer des unités et les boosts si elles sont a proximité du capitaine il peut taper se déplacer lentement et pas fort
+soigneur soigne les autres unités a distance - lent - 
+l'archer attaque à distance - vitesse normale - 
+le cavalier attaque normale - vitesse rapide - 
+le fantassin attaque fort - vitesse lente - 
+le tank attaque faible - vitesse lente - beaucoup de vie - 
+
+on gagne en tuant tous les rois adverses
+
+
+Propriétés du jeu
+
+Or de base : 2600g
+
+Roi(5000g) : 100 pv, vit 0.8, dmg 8, portée 1, (production ressource 10/s)(paysan a proximité de 5 cases)
+
+Paysan(800g) : 50 pv, vit 1.2, dmg 6, portée 1 (enragé : + 20 pv, vit 2.2, dmg 12, portée 2, roi à proximité de 4 cases, ressources +1/s) (ressource +2/s)
+
+Capitaine(1800g) : 100 pv, vit 1.2, dmg 10, portée 1 (boost +3 dmg dans un rayon de 3 cases)
+
+Cavalier(1200g) : 120 pv, vit 2.5, dmg 10, portée 1
+
+Soigneur(2000g) : 40 pv, vit 0.7, portée 5, heal 10/5s
+
+Archer(1000g) : 80 pv, vit 1.2, dmg 10, portée 8
+
+Fantassin(1200g) : 100 pv, vit 1.0, dmg 20, portée 1
+
+Tank(1200g) : 180 pv, vit 0.6, dmg 6, portée 1
+
+
+
+Roi vs Paysan :
+58		0
+Roi vs Capitaine:
+0		20
+Roi vs Cavalier:
+0		40
+Roi vs Archer:
+0		72
+Roi vs Fantassin:
+0		60
+Roi vs Tank:
+0		44
+
+Paysan vs Capitaine:
+0			70
+Paysan vs Cavalier:
+0			90
+Paysan vs Archer:
+0			80
+Paysan vs Fantassin:
+0			82
+Paysan vs Tank:
+0			126
+
+Capitaine vs Cavalier:
+0				20
+Capitaine vs Archer:
+0				50
+Capitaine vs Fantassin:
+0				50
+Capitaine vs Tank:
+0				10
+
+Cavalier vs Archer:
+10			0
+Cavalier vs Fantassin:
+0			40
+Cavalier vs Tank:
+12			0
+
+Archer vs Fantassin:
+20			0
+Archer vs Tank:
+44			0
+
+Fantassin vs Tank:
+46				0
+
+Enragé vs Roi:
+0			0
+Enragé vs Paysan:
+46			0
+Enragé vs Capitaine:
+0			4
+Enragé vs Cavalier:
+0			24
+Enragé vs Archer:
+0			68
+Enragé vs Fantassin:
+0			40
+Enragé vs Tank:
+0			24
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
