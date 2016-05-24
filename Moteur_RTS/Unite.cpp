@@ -40,6 +40,11 @@ void Unite::boucle(const Event& e)
 {
 	if(m_cible.isElem())
 	{
+		if(rangeOk())
+		{	
+			s_gestionnaire->moveElem(getId(), m_pos+((m_cible.getElem()->getPos()-m_pos)*0.1f*m_tmpAttaque));
+		}
+		
 		if(rangeOk() && m_tmpAttaque <= 0)
 		{
 			attaque();
@@ -77,6 +82,11 @@ void Unite::boucle(const Event& e)
 	}
 	
 	m_tmpAttaque -= s_gestionnaire->getElapsedTime();
+	
+	if(m_tmpAttaque <= 0.0f)
+	{
+		m_tmpAttaque = 0.0f;
+	}
 }
 
 int Unite::getPower()

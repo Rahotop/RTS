@@ -16,12 +16,7 @@ Joueur::Joueur() : Player()
 }
 
 void Joueur::boucle(const Event& e)
-{
-	if(e.getTouche()[Touche::SEC])
-	{
-		std::cout << "Gold : " << getGold() << std::endl;
-	}
-	
+{	
 	if((e.getTouche()[Touche::ENTER]) && (e.getTouche()[Touche::ZERO]))
 	{
 		bool create(true);
