@@ -128,6 +128,8 @@ void Joueur::boucle(const Event& e)
 		
 		std::cerr << std::endl << "</select>" << std::endl << std::endl;
 	}
+	
+	
 }
 
 
