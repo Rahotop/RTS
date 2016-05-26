@@ -182,3 +182,23 @@ bool Player::createUnitByCap(const Event& e)
 	}
 	return false;
 }
+
+bool Player::RoiAlive()
+{
+	int nbRoi(0);
+	for(auto& x : m_elem)
+	{
+		if(x.second->getType() == 1)
+		{
+			nbRoi++;
+		}
+	}
+	if(nbRoi == 0)
+	{
+		return false;
+	}
+	else
+	{
+		return true;
+	}
+}

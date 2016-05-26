@@ -32,6 +32,7 @@ class Player
 	bool createEnrage(const Event& e);
 	bool createCapitaine(const Event& e);
 	bool createUnitByCap(const Event& e);
+	bool RoiAlive();
 	
 	static void setGestionnaire(Gestionnaire *g);
 	
