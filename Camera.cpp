@@ -84,35 +84,55 @@ void Camera::deplacement(Event & e)
 {
 	if((unsigned int)e.getMouseX() > (e.getWin()->getSize().x)-20)
 	{
-		m_posCamera.x += 1;
-		m_posCamera.y -= 1;
-		
-		m_posLook.x += 1;
-		m_posLook.y -= 1;		
+		if(m_posLook.y > 0 && m_posLook.x < 1000)
+		{
+			m_posCamera.x += 1;
+			m_posCamera.y -= 1;
+			std::cout << "Camera " << m_posCamera.x << " , " << m_posCamera.y << std::endl;
+	
+			m_posLook.x += 1;
+			m_posLook.y -= 1;
+			std::cout << "Look " << m_posLook.x << " ," << m_posLook.y << std::endl;
+		}
 	}
 	if(e.getMouseX() < 20)
 	{
-		m_posCamera.x -= 1;
-		m_posCamera.y += 1;
+		if(m_posLook.x > 0 && m_posLook.y < 1000)
+		{
+			m_posCamera.x -= 1;
+			m_posCamera.y += 1;
+			std::cout << "Camera " << m_posCamera.x << " , " << m_posCamera.y << std::endl;
 		
-		m_posLook.x -= 1;
-		m_posLook.y += 1;
+			m_posLook.x -= 1;
+			m_posLook.y += 1;
+			std::cout << "Look " << m_posLook.x << " , " << m_posLook.y << std::endl;
+			}
 	}
 	if((unsigned int)e.getMouseY() > (e.getWin()->getSize().y)-20)
 	{
-		m_posCamera.y -= 1;
-		m_posCamera.x -= 1;
+		if(m_posLook.y > 0 && m_posLook.x > 0)
+		{
+			m_posCamera.y -= 1;
+			m_posCamera.x -= 1;
+			std::cout << "Camera " << m_posCamera.x << " , " << m_posCamera.y << std::endl;
 		
-		m_posLook.y -= 1;
-		m_posLook.x -= 1;
+			m_posLook.y -= 1;
+			m_posLook.x -= 1;
+			std::cout << "Look " << m_posLook.x << " , " << m_posLook.y << std::endl;
+		}
 	}
 	if(e.getMouseY() < 20)
 	{
-		m_posCamera.y += 1;
-		m_posCamera.x += 1;
+		if(m_posLook.y < 1000 && m_posLook.x < 1000)
+		{
+			m_posCamera.y += 1;
+			m_posCamera.x += 1;
+			std::cout << "Camera " << m_posCamera.x << " , " << m_posCamera.y << std::endl;
 		
-		m_posLook.y += 1;
-		m_posLook.x += 1;
+			m_posLook.y += 1;
+			m_posLook.x += 1;
+			std::cout << "Look " << m_posLook.x << " , " << m_posLook.y << std::endl;
+			}
 	}
 }
 
